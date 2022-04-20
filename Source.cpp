@@ -66,7 +66,8 @@ int main()
 
     vector<string>words;
     fstream file;
-    string word2;
+    string word2; // feedback: naming: usually almost all naming conventions don't recommend to name your vars as var1, var2 etc.
+                    // the reason for this is that it's easy to lost track of which is which esp. if you didn't write this code.
     string filename = "words.txt";
     string guess;
     string word;
@@ -133,7 +134,7 @@ int main()
                      strings.push_back(guess);
                      updateText = true;
                      compareWord(guess, word);
-                     update();
+                     update(); // feedabck: this function draws the box, would make more sense to call it "drawBox()" instead?
                      guesses++;
                   }
              }
@@ -171,7 +172,7 @@ int main()
                  arr[1][2] = ' ';
                  
             
-                 
+                 // feedback: bracket formatting ;)
                  
                
              
@@ -251,7 +252,7 @@ void createBox()
 }
 
 
-void compareWord(string guess, string word)
+void compareWord(string guess, string word) // feedback: functions arguments could be string references to avoid copying of the strings.
 {
     green = 0;
 
@@ -276,7 +277,7 @@ void compareWord(string guess, string word)
           
         }
 
-
+        // feedback: an interesting close bracket formatting here :)
 
 
     }
